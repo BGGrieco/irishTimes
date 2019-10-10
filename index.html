@@ -70,7 +70,8 @@
           <div class="three">
             <h1>What do you think?</h1>
             <h2>St Patrick's day: Love it or hate it?</h2>
-            <textarea onkeyup="textAreaAdjust(this)" id="story" name="story" maxlength=250 required placeholder="I think..."></textarea>
+            <label class="charCount">Remaining characters:<input disabled maxlength="3" size="3" value="250" id="counter"></label>
+            <textarea onkeyup="textCounter(this, 'counter', 250)" id="story" name="story" maxlength="250" required placeholder="I think..."></textarea>
             <label for="pic">Want to send us a picture?</label>
             <input type="file" name="pic" accept="image/*" capture="camera">
             <label><input type="checkbox" id="consent" checked>I have read the <a href="https://www.irishtimes.com/policy-and-terms/privacy-policy" target="_blank">privacy policy</a>.</label>
@@ -100,13 +101,27 @@
       </div>
     </div>
 
+    <div class="overlay"></div>
+    <div class="confirm">
+      <h1>Thank you!</h1>
+      <h2>Your story has been submitted succesfully.</h2>
+      <p style="font-family: 'Times New Roman'">We will be in touch to let you know if your story was published!</p>
+      <a class="close" href="index.html">OK</a>
+    </div>
+
     <script type="text/javascript" src="js/jQuery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript">
-      //Grow text area with content
-      function textAreaAdjust(o){
-        o.style.height = "1px";
-        o.style.height = (25+o.scrollHeight)+"px";
+      // Display remaining characters
+      function textCounter(field, field2, maxlimit){
+        var countfield = document.getElementById(field2);
+        if (field.value.length > maxlimit) {
+          field.value = field.value.substring(0, maxlimit);
+          return false;
+        }
+        else {
+          countfield.value = maxlimit - field.value.length;
+        }
       }
     </script>
   </body>
