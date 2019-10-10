@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -186,7 +186,17 @@ button:hover {
 }
 
 .send {
-  display: none;
+  border-radius: 4px;
+  width: calc(100% - 10px);
+  box-shadow: none;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+button:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .prev {

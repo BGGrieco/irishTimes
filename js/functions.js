@@ -1,5 +1,9 @@
 $(document).ready(function(){
 //Handle button clicks and displays
+  $(".next").css("display", "block");
+  $(".prev").css("display", "none");
+  $(".send").css("display", "none");
+
   $(".one").addClass("slideInLeft");
   $(".two").addClass("slideOutRight");
   $(".three").addClass("slideOutRight");
@@ -15,13 +19,19 @@ $(document).ready(function(){
           case true:
             $(".one").removeClass("slideInLeft");
             $(".one").addClass("slideOutLeft");
+            $(".next").css("display", "block");
+            $(".prev").css("display", "block");
             break;
           default:
           $(".one").removeClass("slideInLeft");
           $(".one").addClass("slideOutLeft");
+          $(".next").css("display", "block");
+          $(".prev").css("display", "block");
         }
         $(".two").removeClass("slideOutRight");
         $(".two").addClass("slideInRight");
+        $(".next").css("display", "block");
+        $(".prev").css("display", "block");
         break;
       case 1:
         page = 2;
@@ -30,6 +40,9 @@ $(document).ready(function(){
         $(".two").removeClass("slideInRight");
         $(".two").removeClass("slideInLeft");
         $(".two").addClass("slideOutLeft");
+        $(".next").css("display", "none");
+        $(".prev").css("display", "block");
+        $(".send").css("display", "block");
         break;
       default:
       console.log("Page is: " + page);
@@ -44,13 +57,19 @@ $(document).ready(function(){
           case true:
             $(".one").removeClass("slideOutLeft");
             $(".one").addClass("slideInLeft");
+            $(".next").css("display", "block");
+            $(".prev").css("display", "none");
             break;
           default:
           $(".one").removeClass("slideOutLeft");
           $(".one").addClass("slideInLeft");
+          $(".next").css("display", "block");
+          $(".prev").css("display", "none");
         }
         $(".two").removeClass("slideInRight");
         $(".two").addClass("slideOutRight");
+        $(".next").css("display", "block");
+        $(".prev").css("display", "none");
         break;
       case 2:
         page = 1;
@@ -58,6 +77,9 @@ $(document).ready(function(){
         $(".three").addClass("slideOutRight");
         $(".two").removeClass("slideOutLeft");
         $(".two").addClass("slideInLeft");
+        $(".next").css("display", "block");
+        $(".prev").css("display", "block");
+        $(".send").css("display", "block");
         break;
       default:
       console.log("Page is: " + page);
