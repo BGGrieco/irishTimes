@@ -60,12 +60,19 @@ img {
 
 .container {
   position: relative;
-  min-height: 302px;
+  min-height: 400px;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  padding: 0 0 10px 0;
+  overflow: hidden;
+  width: 93%;
 }
 
 .one, .two, .three {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  top: 10px;
 }
 
 .slideOutLeft {
@@ -137,11 +144,7 @@ img {
 }
 
 form {
-  border-radius: 4px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  overflow: hidden;
-  width: 90%;
+  position: relative;
 }
 
 label {
@@ -201,9 +204,12 @@ textarea {
 }
 
 .ovalsContainer {
+  position: absolute;
+  bottom: 60px;
   margin-top: 10px;
   padding: 0;
   width: 60%;
+  left: 20%;
   display: flex;
   text-decoration: none;
 }
@@ -236,9 +242,11 @@ h2.centered.active {
 }
 
 .buttonContainer {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 96%;
+  left: 2%;
   height: 50px;
+  bottom: 8px;
 }
 
 button {
@@ -257,14 +265,17 @@ button:hover {
 }
 
 .send {
+  position: absolute;
+  right: 5px;
+  width: 80px;
   border-radius: 4px;
-  width: calc(100% - 10px);
   box-shadow: none;
   background-color: #f0f0f0;
   margin-bottom: 10px;
   margin-top: 7px;
   font-size: 14px;
   cursor: pointer;
+  padding: 10px 18px;
 }
 
 button:hover {
