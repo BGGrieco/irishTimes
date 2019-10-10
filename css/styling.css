@@ -31,6 +31,12 @@ li {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+}
+
 .mainContainer {
   max-width: 800px;
 }
@@ -40,8 +46,6 @@ li {
 }
 
 .logo {
-  display: block;
-  width: 90%;
   max-width: 800px;
 }
 
