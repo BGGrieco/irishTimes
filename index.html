@@ -11,9 +11,45 @@
     <link rel="stylesheet" href="css/styling.css" type="text/css">
   </head>
   <body>
-    <img src="imgs/header.png" alt="" />
+    <div class="centered">
+      <img class="logo centered" src="imgs/header.png" alt="" />
+      <h1 class="title">Irish abroad: Do you celebrate St Patrick's day?</h1>
+      <h2>As an Irish person living abroad, do you celebrate St Patrick’s Day and use it as an opportunity to promote Ireland? Or do you cringe at the thought of shamrocks and green wigs? Or are you indifferent to it?<br /><br />
+          Are you organising or planning to attend a parade or party for St Patrick’s Day?
+          Send us your stories through the form below.<br /><br />
+          Thank you.</h2>
+    </div>
+    <form class="centered">
+      <div class="one display">
+        <h1>Who are you?</h1>
+        <h2>Tell us a bit about you!</h2>
+        <label for="fname">Name:*</label>
+        <input type="text" id="fname" name="firstname" placeholder="John Smith" required>
 
-    <script type="text/javascript" src="js/jQuery.js"></script>
+        <label for="age">Age:</label>
+        <input type="date" name="bday">
+
+        <label for="job">Occupation:</label>
+        <input type="text" id="job" name="firstname" placeholder="Your job">
+      </div>
+
+      <div class="two display">
+        <h1>Where are you?</h1>
+        <h2>Tell us where you moved to!</h2>
+      </div>
+
+      <div class="three display">
+        <h1>What do you think?</h1>
+        <h2>St Patrick's day: Love it or hate it?</h2>
+        <textarea onkeyup="textAreaAdjust(this)" name="story" maxlength=350 required placeholder="I think..."></textarea>
+        <label><input type="checkbox" id="consent" checked>I have read the <a href="https://www.irishtimes.com/policy-and-terms/privacy-policy" target="_blank">privacy policy</a></label>
+
+
+        <input type="submit" value="Send">
+      </div>
+    </form>
+
+    <script type="text/javascript" src="js/jQuery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>
