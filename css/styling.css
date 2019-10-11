@@ -80,7 +80,7 @@ img {
 }
 
 .slideInLeft {
-  animation: inLeft 0.3s ease-in forwards;
+  animation: inLeft 0.3s ease-out forwards;
 }
 
 .slideOutRight {
@@ -88,7 +88,7 @@ img {
 }
 
 .slideInRight {
-  animation: inRight 0.3s ease-in forwards;
+  animation: inRight 0.3s ease-out forwards;
 }
 
 @keyframes outLeft {
@@ -170,8 +170,11 @@ input, select {
 }
 
 input[type="checkbox"] {
-  width: 13px;
+  width: 15px;
+  height: 15px;
   box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 
 #counter {
