@@ -19,7 +19,8 @@
         <h2 class="subtitle">As an Irish person living abroad, do you celebrate St Patrick’s Day and use it as an opportunity to promote Ireland? Or do you cringe at the thought of shamrocks and green wigs? Or are you indifferent to it?<br /><br />
             Are you organising or planning to attend a parade or party for St Patrick’s Day?
             Send us your stories through the form below.<br /><br />
-            Thank you.</h2>
+            Thank you.<br /><br />
+        </h2>
       </div>
       <div class="container centered">
         <!--Info Slide-->
@@ -59,8 +60,8 @@
               <option value="Armenia">Armenia</option>
               <option value="Aruba">Aruba</option>
             </select>
-            <label for="emailaddress">E-Mail:</label>
-            <input type="email" name="emailaddress">
+            <label for="mail">E-Mail*:</label>
+            <input type="email" id="mail" name="mail" required>
             <label><input type="checkbox" id="consent" checked>I would like to recieve news updates from The Irish Times</label>
           </div>
         </form>
@@ -78,6 +79,7 @@
           </div>
         </form>
 
+        <!--Progress Indicators-->
         <ul class="ovalsContainer centered">
           <li class="oval">
             <h2 class="centered active">1</h2>
@@ -101,9 +103,10 @@
       </div>
     </div>
 
+    <!--Notification-->
     <div class="overlay"></div>
     <div class="confirm">
-      <h1>Thank you!</h1>
+      <h1 id="confirmTitle"></h1>
       <h2>Your story has been submitted succesfully.</h2>
       <p style="font-family: 'Times New Roman'">We will be in touch to let you know if your story was published!</p>
       <a class="close" href="index.html">OK</a>

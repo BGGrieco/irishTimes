@@ -60,7 +60,7 @@ img {
 
 .container {
   position: relative;
-  min-height: 400px;
+  min-height: 410px;
   border-radius: 4px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   padding: 0 0 10px 0;
@@ -153,7 +153,8 @@ label {
 
 input, select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px;
+  height: 36px;
   margin: 8px 0 12px 0;
   display: inline-block;
   border: none;

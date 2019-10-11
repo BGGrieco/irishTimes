@@ -1,28 +1,4 @@
 $(document).ready(function(){
-  // Handle button clicks and displays
-  // sessionStorage.name = $("#name").val();
-  // sessionStorage.story = $("#story").val();
-
-  // Do not change slide unless name field returns a value
-  // $(".next").click(function(){
-  //   if (name == '') {
-  //     console.log(name);
-  //   }
-  //   else {
-  //     handleClick();
-  //   }
-  // });
-
-  // Do not submit unless textarea returns a value
-  // $(".send").click(function(){
-  //   if (story == '') {
-  //     console.log(name);
-  //   }
-  //   else {
-  //     $(".notification").css("display", "block");
-  //   }
-  // });
-
   // Set initial buttons to be displayed
   $(".next").css("display", "block");
   $(".prev").css("display", "none");
@@ -125,5 +101,13 @@ $(document).ready(function(){
       default:
       console.log("Page is: " + page);
     }
+  });
+
+  // Handle "Send" click
+  $(".send").click(function(){
+    var name = $("#name").val();
+    $("#confirmTitle").html("Thank you " + name + "!");
+    $(".overlay").css("display", "block");
+    $(".confirm").css("display", "block");
   });
 });
